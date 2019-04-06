@@ -10,6 +10,8 @@
 <html>
 <head>
     <title>view</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
     <jsp:include page="header.jsp"/>
 </head>
 <body>
@@ -23,16 +25,16 @@
             <li>id: ${newProduct.get().getId()}</li>
             </p>
             <p>
-            <li>data zamówienia: ${newProduct.get().getDate()}</li>
+            <li>order date: ${newProduct.get().getDate()}</li>
             </p>
             <p>
-            <li>opis: ${newProduct.get().getDescription()}</li>
+            <li>description: ${newProduct.get().getDescription()}</li>
             </p>
             <p>
-            <li>cena: ${newProduct.get().getPrice()}</li>
+            <li>price: ${newProduct.get().getPrice()}</li>
             </p>
             <p>
-            <li>kategoria: ${newProduct.get().getCategories()}</li>
+            <li>category: ${newProduct.get().getCategories()}</li>
             </p>
         </c:when>
         <c:otherwise> product doesn't exists</c:otherwise>

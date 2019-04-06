@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>Footer</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <p>created by ${name} , <%=LocalDate.now()%>

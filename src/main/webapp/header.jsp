@@ -9,12 +9,14 @@
 <html>
 <head>
     <title>header</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
-<a href="${pageContext.request.contextPath}/database">home-dateBase</a>
-<a href="${pageContext.request.contextPath}/addProduct">addProduct</a>
+<a href="${pageContext.request.contextPath}/database">HOME</a>
+<a href="${pageContext.request.contextPath}/addProduct">ADD PRODUCT</a>
 <a href="${pageContext.request.contextPath}/card">card</a>
-<a href="${pageContext.request.contextPath}/register">register</a>
+<a href="${pageContext.request.contextPath}/register">REGISTER</a>
 </body>
 </html>

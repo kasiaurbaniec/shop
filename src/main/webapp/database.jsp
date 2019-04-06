@@ -10,6 +10,8 @@
 <html>
 <head>
     <title>Smar_mydlo_i_powidlo</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
     <jsp:include page="header.jsp"/>
     <div>
         <form action="${pageContext.request.contextPath}/database" method="get">
@@ -30,16 +32,16 @@
         <li>id: ${product.getId()}</li>
         </p>
         <p>
-        <li>data zamówienia: ${product.getDate()}</li>
+        <li>order date: ${product.getDate()}</li>
         </p>
         <p>
-        <li>opis: ${product.getDescription()}</li>
+        <li>desciption: ${product.getDescription()}</li>
         </p>
         <p>
-        <li>cena: ${product.getPrice()}</li>
+        <li>price: ${product.getPrice()}</li>
         </p>
         <p>
-        <li>kategoria: ${product.getCategories()}</li>
+        <li>category: ${product.getCategories()}</li>
         </p>
     </div>
 

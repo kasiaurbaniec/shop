@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>register</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
     <jsp:include page="header.jsp"/>
 </head>
 <body>
