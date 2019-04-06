@@ -38,5 +38,6 @@
         <c:otherwise> product doesn't exists</c:otherwise>
     </c:choose>
 </div>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

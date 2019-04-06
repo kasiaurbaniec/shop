@@ -15,6 +15,6 @@
 <a href="${pageContext.request.contextPath}/database">home-dateBase</a>
 <a href="${pageContext.request.contextPath}/addProduct">addProduct</a>
 <a href="${pageContext.request.contextPath}/card">card</a>
-<a href="${pageContext.request.contextPath}/login">login</a>
+<a href="${pageContext.request.contextPath}/register">register</a>
 </body>
 </html>
