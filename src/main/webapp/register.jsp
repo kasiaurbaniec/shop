@@ -18,10 +18,10 @@
         <p> email <input type="text" name="email"/></p>
         <p>password <input type="text" name="password"/></p>
         <p>login <input type="text" name="login"/></p>
-        <p>submit <input type="submit" name="submit" value="submit"/></p>
+        <p><input type="submit" name="submit" value="register"/></p>
     </form>
 </div>
-<p>${result}</p>
+<p style="color: red">${result}</p>
 <jsp:include page="footer.jsp"/>
 </body>
 </html>

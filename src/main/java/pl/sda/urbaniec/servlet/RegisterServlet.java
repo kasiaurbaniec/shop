@@ -45,20 +45,14 @@ public class RegisterServlet extends HttpServlet {
             if (option) {
                 this.db.createUser(email, password, login, Arrays.asList(Role.USER));
                 result = "new user created";
-
                 httpServletResponse.sendRedirect("/database");
-
             }
-
         } else {
             result = "you left some input empty";
             httpServletRequest.setAttribute("result", result);
             httpServletRequest.getRequestDispatcher("/register.jsp")
                     .forward(httpServletRequest, httpServletResponse);
-
         }
-
-
     }
 
     @Override

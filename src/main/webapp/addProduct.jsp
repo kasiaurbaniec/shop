@@ -12,7 +12,7 @@
     <jsp:include page="header.jsp"/>
 </head>
 <body>
-<h1>AddProduct</h1>
+<h1>Add Product</h1>
 <div>
     <form action="${pageContext.request.contextPath}/addProduct" method="post">
         <p> name <input type="text" name="name"/></p> <%--name= ma się tak samo nazywać jak parametr w servlecie--%>
@@ -20,7 +20,7 @@
         <p>price <input type="text" name="price"/></p>
         <p>category <input type="text" name="newCategory"/></p>
         <p>photo <input type="text" name="photoUrl"/></p>
-        <p>submit <input type="submit" name="submit" value="submit"/></p>
+        <p><input type="submit" name="submit" value="ADD"/></p>
     </form>
 </div>
 <jsp:include page="footer.jsp"/>

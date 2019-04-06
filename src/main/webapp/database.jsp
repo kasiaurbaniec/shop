@@ -15,7 +15,7 @@
         <form action="${pageContext.request.contextPath}/database" method="get">
             <p>category <input type="text" name="category"/>
             </p> <%--name= ma się tak samo nazywać jak parametr w servlecie--%>
-            <p>submit <input type="submit" name="submit" value="submit"/></p>
+            <p><input type="submit" name="submit" value="show"/></p>
         </form>
     </div>
 </head>
