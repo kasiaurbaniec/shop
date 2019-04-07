@@ -62,3 +62,12 @@ input:hover {
 #loggedUser {
     font-size: 20px;
 }
+
+.advertisement {
+    width: 15%;
+    clear: both;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+    text-indent: 0px;
+}

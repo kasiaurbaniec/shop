@@ -1,3 +1,4 @@
+<%@ page import="pl.sda.urbaniec.model.Role" %>
 <%@ page import="pl.sda.urbaniec.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
@@ -15,11 +16,16 @@
     <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-<a href="${pageContext.request.contextPath}/database">HOME</a>
+<%
+    final User user = (User) session.getAttribute("loggedUser");
+    if (user != null && user.getRole().contains(Role.ADMIN)) {
+%>
 <a href="${pageContext.request.contextPath}/addProduct">ADD PRODUCT</a>
+<%
+    }
+%>
+<a href="${pageContext.request.contextPath}/database">HOME</a>
 <a href="${pageContext.request.contextPath}/register">REGISTER</a>
-
 <%
     final User loggedUser = (User) session.getAttribute("loggedUser");
     if (loggedUser == null) {
@@ -33,6 +39,5 @@
         out.println(" HELLO " + loggedUser.getLogin().toUpperCase());
     }
 %>
-
 </body>
 </html>

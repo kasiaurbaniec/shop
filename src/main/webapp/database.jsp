@@ -32,7 +32,7 @@
 
 <c:forEach items="${products}" var="product">
     <div class="block">
-        <h4>${product.getName()}</h4>
+        <a href="${pageContext.request.contextPath}/viewProduct?id=${product.getId()}"><h4>${product.getName()}</h4></a>
         <p><img src=${product.getHref()}  height="100" alt="photo of item"/></p>
         <ul>
             <li>id: ${product.getId()}</li>
@@ -43,6 +43,12 @@
     </div>
 
 </c:forEach>
+<div class="advertisement">
+    <h4>${advert.getName()}</h4>
+    <p>price: ${advert.getPrice()}</p>
+    <p><img src=${advert.getHref()}  height="50" alt="photo of item"/></p>
+
+</div>
 <div id="footer">
     <jsp:include page="footer.jsp"/>
 </div>

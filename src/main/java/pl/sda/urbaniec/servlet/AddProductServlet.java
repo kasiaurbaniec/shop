@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/addProduct")
+@WebServlet(urlPatterns = "/addProduct", name = "addProductServlet")
 public class AddProductServlet extends HttpServlet {
     private static final long serialVersionUID = -6649589278013879040L;
     private ProductDB list;
