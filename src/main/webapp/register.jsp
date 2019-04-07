@@ -18,7 +18,7 @@
 <div>
     <form action="${pageContext.request.contextPath}/register" method="post">
         <p> email <input type="text" name="email"/></p>
-        <p>password <input type="text" name="password"/></p>
+        <p>password <input type="password" name="password"/></p>
         <p>login <input type="text" name="login"/></p>
         <p><input type="submit" name="submit" value="register"/></p>
     </form>

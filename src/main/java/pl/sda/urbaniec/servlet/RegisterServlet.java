@@ -44,8 +44,8 @@ public class RegisterServlet extends HttpServlet {
                 }
             }
             if (option) {
-                this.db.createUser(email, password, login, Arrays.asList(Role.USER));
-                result = "new user created";
+                final User newUser = this.db.createUser(email, password, login, Arrays.asList(Role.USER));
+                httpServletRequest.getSession().setAttribute("loggedUser", newUser);
                 httpServletResponse.sendRedirect("/database");
             }
         } else {

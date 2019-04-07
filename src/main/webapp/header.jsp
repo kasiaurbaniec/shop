@@ -1,3 +1,5 @@
+<%@ page import="pl.sda.urbaniec.model.User" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Kasia
@@ -16,9 +18,21 @@
 
 <a href="${pageContext.request.contextPath}/database">HOME</a>
 <a href="${pageContext.request.contextPath}/addProduct">ADD PRODUCT</a>
-<%--<a href="${pageContext.request.contextPath}/card">card</a>--%>
 <a href="${pageContext.request.contextPath}/register">REGISTER</a>
+
+<%
+    final User loggedUser = (User) session.getAttribute("loggedUser");
+    if (loggedUser == null) {
+%>
 <a href="${pageContext.request.contextPath}/login">LOGIN</a>
+<%
+} else {
+%>
+<a href="${pageContext.request.contextPath}/logout">LOGOUT</a>
+<%
+        out.println(" HELLO " + loggedUser.getLogin().toUpperCase());
+    }
+%>
 
 </body>
 </html>

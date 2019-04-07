@@ -32,10 +32,10 @@ public class UserDB {
         return this.userList.stream().filter(x -> x.getLogin().contains(login)).findFirst();
     }
 
-    public void createUser(final String email, final String password, final String login, final List<Role> roles) {
+    public User createUser(final String email, final String password, final String login, final List<Role> roles) {
         final User user = new User(email, password, login, roles);
         this.userList.add(user);
-
+        return user;
     }
 
 }

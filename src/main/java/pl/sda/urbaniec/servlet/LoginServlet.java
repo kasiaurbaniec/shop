@@ -25,7 +25,8 @@ public class LoginServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(final HttpServletRequest httpServletRequest, final HttpServletResponse httpServletResponse) throws ServletException, IOException {
+    protected void doPost(final HttpServletRequest httpServletRequest,
+                          final HttpServletResponse httpServletResponse) throws ServletException, IOException {
         final String login = httpServletRequest.getParameter("login");
         final String password = httpServletRequest.getParameter("password");
         final String result;
@@ -35,7 +36,9 @@ public class LoginServlet extends HttpServlet {
                     .filter(user -> user.getPassword().equals(password))
                     .findFirst();
             if (optUser.isPresent()) {
+                httpServletRequest.getSession().setAttribute("loggedUser", optUser.get());
                 httpServletResponse.sendRedirect("/database");
+
             } else {
                 result = "wrong login or password";
                 httpServletRequest.setAttribute("result", result);
@@ -56,3 +59,8 @@ public class LoginServlet extends HttpServlet {
         super.init();
     }
 }
+//wylogowanie
+/*
+do login servlet i register servlet dodaj logout servlet
+ */
+//httpServletRequest.getSession().invaliduate

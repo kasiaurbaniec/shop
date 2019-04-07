@@ -18,7 +18,8 @@
 <div>
     <form action="${pageContext.request.contextPath}/login" method="post">
         <p>login <input type="text" name="login"/></p>
-        <p>password <input type="text" name="password"/></p>
+        <p>password <input type="password" name="password"/></p>
+
         <p><input type="submit" name="submit" value="login"/></p>
     </form>
 </div>

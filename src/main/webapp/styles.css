@@ -58,3 +58,7 @@ ul {
 input:hover {
     background-color: #67C195;
 }
+
+#loggedUser {
+    font-size: 20px;
+}
