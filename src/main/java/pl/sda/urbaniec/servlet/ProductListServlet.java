@@ -36,7 +36,7 @@ public class ProductListServlet extends HttpServlet {
             if (cookie.getName().equals("lastView")) {
                 final Long id = Long.parseLong(cookie.getValue());
                 final Optional<Product> advert = this.list.getProductById(id);
-                httpServletRequest.setAttribute("advert", advert.get());
+                httpServletRequest.setAttribute("advert", advert);
             }
         }
 

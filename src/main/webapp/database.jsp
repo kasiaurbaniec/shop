@@ -43,12 +43,16 @@
     </div>
 
 </c:forEach>
-<div class="advertisement">
-    <h4>${advert.getName()}</h4>
-    <p>price: ${advert.getPrice()}</p>
-    <p><img src=${advert.getHref()}  height="50" alt="photo of item"/></p>
-
-</div>
+<c:choose>
+    <c:when test="${advert.isPresent()}">
+        <div class="advertisement">
+            <h4>${advert.get().getName()}</h4>
+            <p>price: ${advert.get().getPrice()}</p>
+            <p><img src=${advert.get().getHref()}  height="50" alt="photo of item"/></p>
+        </div>
+    </c:when>
+    <c:otherwise> </c:otherwise>
+</c:choose>
 <div id="footer">
     <jsp:include page="footer.jsp"/>
 </div>
