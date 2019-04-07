@@ -17,7 +17,7 @@ public class AddProductServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest httpServletRequest,
                          final HttpServletResponse httpServletResponse) throws ServletException, IOException {
-
+        httpServletRequest.setAttribute("name", "Kasia Urbaniec");
         httpServletRequest.getRequestDispatcher("/addProduct.jsp")
                 .forward(httpServletRequest, httpServletResponse);
 

@@ -15,8 +15,14 @@
     <jsp:include page="header.jsp"/>
     <div>
         <form action="${pageContext.request.contextPath}/database" method="get">
-            <p>category <input type="text" name="category"/>
-            </p> <%--name= ma się tak samo nazywać jak parametr w servlecie--%>
+            <p>category <select name="category">
+                <option value="">All</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Light">Light</option>
+                <option value="Other items">Other items</option>
+            </select>
+            </p>
+            <%--name= ma się tak samo nazywać jak parametr w servlecie--%>
             <p><input type="submit" name="submit" value="show"/></p>
         </form>
     </div>
@@ -25,27 +31,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:forEach items="${products}" var="product">
-    <div>
+    <div class="block">
         <h4>${product.getName()}</h4>
         <p><img src=${product.getHref()}  height="100" alt="photo of item"/></p>
-        <p>
-        <li>id: ${product.getId()}</li>
-        </p>
-        <p>
-        <li>order date: ${product.getDate()}</li>
-        </p>
-        <p>
-        <li>desciption: ${product.getDescription()}</li>
-        </p>
-        <p>
-        <li>price: ${product.getPrice()}</li>
-        </p>
-        <p>
-        <li>category: ${product.getCategories()}</li>
-        </p>
+        <ul>
+            <li>id: ${product.getId()}</li>
+            <li>desciption: ${product.getDescription()}</li>
+            <li>price: ${product.getPrice()}</li>
+            <li>category: ${product.getCategories()}</li>
+        </ul>
     </div>
 
 </c:forEach>
-<jsp:include page="footer.jsp"/>
+<div id="footer">
+    <jsp:include page="footer.jsp"/>
+</div>
 </body>
 </html>

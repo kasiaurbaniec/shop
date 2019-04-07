@@ -19,6 +19,7 @@ public class ProductViewServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest httpServletRequest,
                          final HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        httpServletRequest.setAttribute("name", "Kasia Urbaniec");
         final Long id = Long.parseLong(httpServletRequest.getParameter("id"));
         final Optional<Product> product = this.list.getProductById(id);
 

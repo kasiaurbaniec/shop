@@ -22,6 +22,7 @@ public class ProductListServlet extends HttpServlet {
                          final HttpServletResponse httpServletResponse)
             throws ServletException, IOException {
         httpServletRequest.setAttribute("name", "Kasia Urbaniec");
+
         final String category = httpServletRequest.getParameter("category"); //to ma się nazywać tak samo jak w jsp
         List<Product> products = this.list.getProductList();
         if (category != null) {

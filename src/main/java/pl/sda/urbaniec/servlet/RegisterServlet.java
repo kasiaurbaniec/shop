@@ -20,6 +20,7 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest httpServletRequest,
                          final HttpServletResponse httpServletResponse) throws ServletException, IOException {
+        httpServletRequest.setAttribute("name", "Kasia Urbaniec");
         httpServletRequest.getRequestDispatcher("/register.jsp")
                 .forward(httpServletRequest, httpServletResponse);
     }

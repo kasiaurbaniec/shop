@@ -16,7 +16,9 @@
 
 <a href="${pageContext.request.contextPath}/database">HOME</a>
 <a href="${pageContext.request.contextPath}/addProduct">ADD PRODUCT</a>
-<a href="${pageContext.request.contextPath}/card">card</a>
+<%--<a href="${pageContext.request.contextPath}/card">card</a>--%>
 <a href="${pageContext.request.contextPath}/register">REGISTER</a>
+<a href="${pageContext.request.contextPath}/login">LOGIN</a>
+
 </body>
 </html>
