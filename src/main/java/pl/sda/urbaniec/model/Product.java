@@ -1,6 +1,7 @@
 package pl.sda.urbaniec.model;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Product {
     private long id;
@@ -77,5 +78,28 @@ public class Product {
 
     public void setHref(final String href) {
         this.href = href;
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+        final Product product = (Product) o;
+        return this.id == product.id &&
+                this.price == product.price &&
+                Objects.equals(this.date, product.date) &&
+                Objects.equals(this.name, product.name) &&
+                Objects.equals(this.description, product.description) &&
+                Objects.equals(this.categories, product.categories) &&
+                Objects.equals(this.href, product.href);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.id, this.date, this.name, this.description, this.categories, this.price, this.href);
     }
 }

@@ -14,6 +14,7 @@
     <title>header</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" data-auto-replace-svg="nest"></script>
 </head>
 <body>
 <%
@@ -25,6 +26,7 @@
     }
 %>
 <a href="${pageContext.request.contextPath}/database">HOME</a>
+<a href="${pageContext.request.contextPath}/addToCart">CART</a>
 <a href="${pageContext.request.contextPath}/register">REGISTER</a>
 <%
     final User loggedUser = (User) session.getAttribute("loggedUser");

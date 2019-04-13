@@ -28,6 +28,8 @@
     </div>
 </head>
 <body>
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:forEach items="${products}" var="product">
@@ -49,6 +51,7 @@
             <h4>${advert.get().getName()}</h4>
             <p>price: ${advert.get().getPrice()}</p>
             <p><img src=${advert.get().getHref()}  height="50" alt="photo of item"/></p>
+
         </div>
     </c:when>
     <c:otherwise> </c:otherwise>
