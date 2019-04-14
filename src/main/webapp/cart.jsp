@@ -40,6 +40,7 @@
     <button type="submit">+</button>
 </form>
 </p>
+</p><a href="${pageContext.request.contextPath}/buy-data">ORDER</a></p>
 <%
         }
     } else {
